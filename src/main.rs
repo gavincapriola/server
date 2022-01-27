@@ -1,4 +1,9 @@
 struct Server { address: String }
+struct Request { 
+  method: String,
+  path: String,
+  query_string: String,
+}
 
 impl Server {
   fn new(address: String) -> Self {
