@@ -2,7 +2,7 @@ struct Server { address: String }
 struct Request { 
   method: Method,
   path: String,
-  query_string: String,
+  query_string: Option<String>,
 }
 
 enum Method { 
