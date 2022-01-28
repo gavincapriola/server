@@ -1,3 +1,5 @@
+use std::net::TcpListener; // https://doc.rust-lang.org/std/net/struct.TcpListener.html
+
 pub struct Server { address: String }
 
 impl Server {
@@ -7,5 +9,7 @@ impl Server {
 
   pub fn start(&self) { 
     println!("Starting server at {}", self.address); 
+
+    let listener = TcpListener::bind(&self.address).unwrap();
   }
 }
