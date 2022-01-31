@@ -1,4 +1,4 @@
-## Building a HTTP Server From Scratch
+## Building a HTTP Server
 
 Go to [rust-lang.org](https://rust-lang.org) and click on the `Get Started` button and follow the instructions to install Rust for your operating system.
 
