@@ -1,1 +1,11 @@
-pub enum Method { GET, POST, PUT, DELETE }
+pub enum Method { 
+  GET, 
+  DELETE,
+  POST, 
+  PUT, 
+  HEAD,
+  CONNECT,
+  OPTIONS,
+  TRACE,
+  PATCH, 
+}
