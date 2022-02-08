@@ -1,4 +1,4 @@
-pub enum StatusCode {}
+use super::StatusCode;
 
 pub struct Response {
   status_code: StatusCode,
@@ -7,9 +7,6 @@ pub struct Response {
 
 impl Response {
   pub fn new(status_code: StatusCode, body: Option<String>) -> Self {
-    Response {
-      status_code: status_code,
-      body: body,
-    }
+    Response { status_code, body }
   }
 }
