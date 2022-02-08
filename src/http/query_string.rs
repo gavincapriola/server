@@ -10,7 +10,7 @@ pub struct QueryString<'buf> {
 }
 
 impl<'buf> QueryString<'buf> {
-  pub fn get(&self, key: &str) -> Options<&Value> {
+  pub fn get(&self, key: &str) -> Option<&Value> {
     self.data.get(key)
   }
 }
