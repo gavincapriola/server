@@ -1,5 +1,5 @@
 use super::method::{ Method, MethodError };
-use super::{ QueryString };
+use super::QueryString;
 use std::convert::TryFrom;
 use std::error::Error;
 use std::fmt::{ Result as FmtResult, Display, Formatter, Debug };
@@ -29,7 +29,6 @@ impl<'buf> TryFrom<&'buf [u8]> for Request<'buf> {
     let method: Method = method.parse()?;
 
     let mut query_string = None;
-
     if let Some(i) = path.find('?') {
       query_string = Some(QueryString::from(&path[i + 1..]));
       path = &path[..i];
@@ -63,10 +62,10 @@ pub enum ParseError {
 impl ParseError {
   fn message(&self) -> &str {
     match self {
-      Self::InvalidRequest => "InvalidRequest",
-      Self::InvalidEncoding => "InvalidEncoding",
-      Self::InvalidProtocol => "InvalidProtocol",
-      Self::InvalidMethod => "InvalidMethod",
+      Self::InvalidRequest => "Invalid Request",
+      Self::InvalidEncoding => "Invalid Encoding",
+      Self::InvalidProtocol => "Invalid Protocol",
+      Self::InvalidMethod => "Invalid Method",
     }
   }
 }
