@@ -2,7 +2,7 @@
 name = "server"
 version = "0.1.0"
 authors = ["Gavin Capriola <@gavincapriola>"]
-edition = "2018"
+edition = "2021"
 repository = "https://github.com/gavincapriola/server"
 license = "Unlicense"
 
